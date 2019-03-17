@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="css/mycryptowallet.css">
+    <title>Hello, world!</title>
+
+    <style>
+
+
+    </style>
+
+</head>
+<body>
+
+
+<header>
+    <div class="top-price-block hidden-xs hidden-sm">
+        <div class="container" >
+            <div class="row">
+                <!--<div class="col-md-2"></div>-->
+                <div class="col-md-3"><span>BTC:$4402</span></div>
+                <div class="col-md-3"><span>LTC:$9483</span></div>
+                <div class="col-md-3"><span>ETC:$979</span></div>
+                <div class="col-md-3"><span>XRP:$833</span></div>
+                <!--<div class="col-md-2"></div>-->
+            </div>
+        </div>
+    </div>
+
+
+    <!--在bs中找代码的时候，还可以通过inspect来查看，进一步了解是怎么写-->
+
+
+    <!--navbar-custom是自定义的样式，因为要对导航栏进行改造，所以就将navbar-default改成navbar-custom-->
+    <!--avbar-custom需要更改什么呢，可以去css对应的地方去看看-->
+    <nav class="navbar navbar-custom navbar-static-top">
+        <div class="container">
+            <!--汉堡菜单-->
+
+            <!--这个navbar-header主要是包含了navbar-brand这个东西，是作为brand也就是logo出现的-->
+            <div class="navbar-header">
+
+                <!--这个小部分就是汉堡菜单-->
+                <!--data-target="#myCustomMenu"这个地方需要修改，且和下面相呼应-->
+                <!--小提示，点击汉堡菜单这个功能是由js功能来提供，只要在底部引入既可以-->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCustomMenu" aria-expanded="false">
+                    <!--screen read only，屏幕阅读器的类型 -->
+                    <span class="sr-only">切换菜单</span>
+                    <!--这个下面就是3条杆-->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <!--这是官方推荐使用a标签-->
+                <a class="navbar-brand" href="#">
+                    <brand>img</brand>
+                    <span>AIUGROUP</span>
+                </a>
+            </div>
+
+            <!--data-target 可以是成class 也可以是 id，但是推荐使用id-->
+
+            <!--这个是真正的导航栏-->
+            <div class="collapse navbar-collapse" id="myCustomMenu">
+                <!--ul就是导航的规定样式，之所以有上面的div，是为了自适应性的考虑-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#" >Home</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Sign in</a></li>
+                    <li><a href="#">Sign out</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+
+
+
+<!--侧边栏导航-->
+
+
+
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/main.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>-->
+<!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
+
+
+
+
+</body>
+</html>

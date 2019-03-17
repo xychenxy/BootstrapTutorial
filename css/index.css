@@ -1,0 +1,267 @@
+/*
+Theme Name: AIU GROUP
+Author: xychen
+Author URI: https://wordpress.org/
+Description: It is a web to show aiu
+Version: 1.0
+Tags: not yet
+*/
+
+
+body{
+    /*background-color: #061724;*/
+    padding-top: 80px;
+}
+
+
+
+
+
+
+.brand_for_logo{
+    color: #957B5F;
+
+}
+
+.brand_logo{
+    border: 3px solid #957B5F;
+    font-size: 18px;
+    /*font-weight: bolder;*/
+    line-height: 80px;
+    padding: 13px;
+    color: #957B5F;
+}
+
+.brand_text{
+    width: 50px;
+    font-size: 11px;
+
+}
+
+
+
+
+
+
+.top-price-block{
+    display: block;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+
+/* 更改 1。1  */
+/*这里，背景颜色和边框颜色都设置一下 */
+.navbar-custom {
+    /*改*/
+    background-color: #fff;
+    /*改*/
+    border-color: #f5f5f5;
+    margin-bottom: 0px;
+}
+
+
+
+/* 更改 1。2 */
+/*这里设置一个行高，是因为字体图标的大小，所以需要更改这里*/
+.navbar-custom .navbar-brand {
+    /*color: #777;*/
+    color: #957B5F;
+    /*添加，在上面brand样式设计的时候，高度是32px和50px，这个数值可以在网站上面调试的时候来调*/
+    height: 80px;
+}
+
+.navbar-custom .navbar-brand:hover,
+.navbar-custom .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+
+
+.navbar-custom .navbar-text {
+    color: #777;
+
+}
+/* 更改 1。3 */
+/*这里修改，对导航栏里面的a标签进行设置*/
+
+.navbar-custom .navbar-nav > li > a {
+    /*color: #777;*/
+    color: #957B5F;
+    /*这个48px要通过调试和计算得到*/
+    line-height: 48px;
+    /*字体偏小来，更改一下大小*/
+    font-size: 18px;
+}
+/* 更改 1。4 */
+/* 修改 这里，关于a标签的 下划线问题*/
+/*这里使用来逗号呢，是什么意思呢？？*/
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+    color: #333;
+    /*是不需要任何背景颜色，所以设置成透明，改成#fff也就是白色 也可以*/
+    background-color: transparent;
+    /*下划线问题，那么全部都是2px的实体红线*/
+    /*border-bottom: 2px solid #957B5F;*/
+
+}
+/* 更改1。5 */
+/* 修改 这里*/
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+    /*color: #555;*/
+    color: #957B5F;
+    /*是不需要任何背景颜色，所以设置成透明，改成#fff也就是白色 也可以*/
+    background-color: transparent;
+    /*下划线问题，只要是active的类，那么全部都是2px的实体红线*/
+    /*border-bottom: 2px solid #957B5F;*/
+}
+
+
+.navbar-custom .navbar-nav > .disabled > a,
+.navbar-custom .navbar-nav > .disabled > a:hover,
+.navbar-custom .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+
+
+
+/* 更改1。6 */
+/* 修改, 可以根据toggle本身属性，来做修改*/
+/*调整.navbar-toggle，是因为显示的不太友好*/
+.navbar-custom .navbar-toggle {
+    border-color: #ddd;
+    /*这里不行*/
+    margin-top: 23px;
+    /*这里也不行*/
+    margin-bottom: 23px;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-custom .navbar-collapse,
+.navbar-custom .navbar-form {
+    border-color: #e7e7e7;
+}
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+
+/*所以这个部分也是nav自带的，因为自适应需要*/
+@media (max-width: 767px) {
+    .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.navbar-custom .navbar-link {
+    color: #777;
+}
+.navbar-custom .navbar-link:hover {
+    color: #333;
+}
+.navbar-custom .btn-link {
+    color: #777;
+}
+.navbar-custom .btn-link:hover,
+.navbar-custom .btn-link:focus {
+    color: #333;
+}
+.navbar-custom .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-custom .btn-link:hover,
+.navbar-custom .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-custom .btn-link:focus {
+    color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+.project_card{
+    margin-top: 100px;
+}
+
+
+
+.project_card .panne_project_name{
+    text-align: center;
+    font-size: 30px;
+    /*vertical-align:bottom;*/
+}
+
+.project_card .panne_project_address{
+    text-align: left;
+    font-size: 25px;
+    border-bottom-style: solid;
+    border-bottom-color: darkgrey;
+    width:fit-content;
+
+    /*background:*/
+    /*linear-gradient(135deg, transparent 49.5%, darkgrey 49.5%,  darkgrey 50.5%, transparent 50.5%);*/
+
+}
+
+.project_card .panne_project_profit{
+    font-size: 28px;
+}
+
+.project_card .panne_project_period{
+    font-size: 20px;
+}
+.project_card .panne_project_descript_1{
+    height: 40px;
+}
+
+.project_card .panne_project_descript_2{
+    height: 35px;
+    margin-top: 18px;
+}
+.project_card .panne_project_descript_3{
+    height: 40px;
+    margin-top: 20px;
+
+}
+.project_card .panne_project_descript_1_tag{
+    padding-bottom: 0px;
+}
+/*.project_card .panne_project_descript_1_position{*/
+/*position: relative;*/
+/*}*/
+/*.project_card .panne_project_descript_1_tag{*/
+/*position: absolute;*/
+/*bottom: 0px;*/
+/*}*/

@@ -9,6 +9,13 @@ body{
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+
+/*
+svg是目前十分流行的图像文件格式了,svg严格来说应该是一种开放标准的矢量图形语言，
+使用svg格式我们可以直接用代码来描绘图像，可以用任何文字处理工具打开svg图像，
+通过改变部分代码来使图像具有交互功能，并可以随时插入到HTML中通过浏览器(如火狐浏览器)来观看。
+*/
+
 @font-face {
     font-family: itcast;
     src: url('../font/MiFie-Web-Font.eot') format('embedded-opentype'),
@@ -23,29 +30,49 @@ body{
 }
 
 
+/*需要的时候，可以搜索 如何使用伪类元素，如何制作svg之类的*/
+/*如何制作矢量图，打开一个网站叫做 icomoon.io (国外的网站)*/
+/*打开后，点击 app */
+/*
+ 1：使用倒入功能，倒入2个svg，然后生成，字符编码 e901; 例如61代表的是a；然后命名之后点击下载
+ 2：使用网站提供的功能
+ */
+
+
 
 /* 知识点： 伪元素*/
+/*给i标签起一个类名，写法如下，content这个东西从哪里来呢？？？*/
+
+/*字体图标 是一个矢量图，每一个字母都是对应图标*/
+
+
 .icon-mobilephone::before{
     content:"\e908";
     font-size: 13px;
 }
+
 .icon-telephone::before{
     content:"\e909";
     font-size: 15px;
 }
 
-.icon-logo::before{
-    content:'\e93e'
-}
-.icon-icon::before{
-    content:'\e920'
-}
+
 
 
 /*
     bootstrap 扩展样式
 
 */
+
+
+/* 下面这个知识点：教你如何 更换使用bs的样式 */
+/*<!--btn-register是自己起的一个类名，因为要重写这个样式-->*/
+/*<!--方法：去bs css中随便copy一个btn-default的代码，然后搜索关键字，将default替换成register-->*/
+/*<!--具体操作，情趣css文件中看-->*/
+/* 方法2：去blog.koalite.com/bbg/这个网站，这个网站是bs的按钮快速生成器，在这里，我们主要是需要颜色
+生存之后，就复制过来，放在这里，如下所示
+*/
+
 
 .btn-register {
     color: #ffffff;
@@ -106,6 +133,8 @@ fieldset[disabled] .btn-register.active {
 }
 
 
+
+/* 1。1 头部的顶部，给一个高度，给一个居中，给一个下边框线*/
 #header > .topbar{
 
     height: 40px;
@@ -126,6 +155,10 @@ fieldset[disabled] .btn-register.active {
 }
 
 /* a标签的颜色和字体，是不受父级元素样式影响的*/
+
+/*需要对里面所有的a标签进行处理，给一个class叫做 mobile-link */
+/*a标签的字体，颜色，鼠标划过时候*/
+
 #header .mobile-link{
     font-size: 12px;
     color: #888;
@@ -138,6 +171,11 @@ fieldset[disabled] .btn-register.active {
 
 
 /* 通过css来控制 显示与隐藏，而不是通过js */
+
+/*要点：
+当鼠标在上面的时候，属性display会变成 block
+当鼠标挪走的时候，属性display会变成 none
+*/
 #header .mobile-link > img{
     display: none;
     position: absolute;
@@ -173,10 +211,35 @@ fieldset[disabled] .btn-register.active {
 
 
 
+
+/** end 1。1 头部的顶部，给一个高度，给一个居中，给一个下边框线*/
+
+
+
+/*1。2 导航栏开始*/
+
+
+.icon-logo::before{
+    content:'\e93e'
+}
+.icon-icon::before{
+    content:'\e920'
+}
+
+
+/*为什么需要在之类对他们进行样式设计呢？*/
+/*因为他们2个的高度都是不一样的，
+但是通过line-height: 50px;
+    vertical-align: middle;这2个元素，就可以让它们居中
+*/
+
 #header .icon-icon{
+    /*因为是字体，所以才可以设计font-size*/
     font-size: 50px;
+    /*这里是主题颜色*/
     color: #E92322;
     line-height: 50px;
+    /*vertical-align:处理文字基线*/
     vertical-align: middle;
 }
 
@@ -189,20 +252,33 @@ fieldset[disabled] .btn-register.active {
 
 
 /*
-修改成自定义的颜色
+将navbar-default中的代码copy过来，修改成自定义的颜色
 */
+/*对navbar-default进行改造*/
+/*小技巧，可以在网站上调试好了，再复制过来，*/
+
+
+
+/* 更改 1。1  */
+/*这里，背景颜色和边框颜色都设置一下 */
 .navbar-custom {
+    /*改*/
     background-color: #fff;
+    /*改*/
     border-color: #f5f5f5;
     margin-bottom: 0px;
 }
 
-/*这里设置一个行高*/
+
+
+/* 更改 1。2 */
+/*这里设置一个行高，是因为字体图标的大小，所以需要更改这里*/
 .navbar-custom .navbar-brand {
     color: #777;
+    /*添加，在上面brand样式设计的时候，高度是32px和50px，这个数值可以在网站上面调试的时候来调*/
     height: 80px;
-
 }
+
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus {
     color: #5e5e5e;
@@ -212,38 +288,58 @@ fieldset[disabled] .btn-register.active {
     color: #777;
 
 }
-/*这里修改*/
+/* 更改 1。3 */
+/*这里修改，对导航栏里面的a标签进行设置*/
+
 .navbar-custom .navbar-nav > li > a {
     color: #777;
+    /*这个48px要通过调试和计算得到*/
     line-height: 48px;
+    /*字体偏小来，更改一下大小*/
     font-size: 14px;
 }
-/* 修改 这里*/
+/* 更改 1。4 */
+/* 修改 这里，关于a标签的 下划线问题*/
+/*这里使用来逗号呢，是什么意思呢？？*/
 .navbar-custom .navbar-nav > li > a:hover,
 .navbar-custom .navbar-nav > li > a:focus {
     color: #333;
+    /*是不需要任何背景颜色，所以设置成透明，改成#fff也就是白色 也可以*/
     background-color: transparent;
+    /*下划线问题，那么全部都是2px的实体红线*/
     border-bottom: 2px solid #E92322;
 
 }
+/* 更改1。5 */
 /* 修改 这里*/
 .navbar-custom .navbar-nav > .active > a,
 .navbar-custom .navbar-nav > .active > a:hover,
 .navbar-custom .navbar-nav > .active > a:focus {
     color: #555;
+    /*是不需要任何背景颜色，所以设置成透明，改成#fff也就是白色 也可以*/
     background-color: transparent;
+    /*下划线问题，只要是active的类，那么全部都是2px的实体红线*/
     border-bottom: 2px solid #E92322;
 }
+
+
 .navbar-custom .navbar-nav > .disabled > a,
 .navbar-custom .navbar-nav > .disabled > a:hover,
 .navbar-custom .navbar-nav > .disabled > a:focus {
     color: #ccc;
     background-color: transparent;
 }
+
+
+
+/* 更改1。6 */
 /* 修改, 可以根据toggle本身属性，来做修改*/
+/*调整.navbar-toggle，是因为显示的不太友好*/
 .navbar-custom .navbar-toggle {
     border-color: #ddd;
+    /*这里不行*/
     margin-top: 23px;
+    /*这里也不行*/
     margin-bottom: 23px;
 }
 .navbar-custom .navbar-toggle:hover,
@@ -263,6 +359,8 @@ fieldset[disabled] .btn-register.active {
     color: #555;
     background-color: #e7e7e7;
 }
+
+/*所以这个部分也是nav自带的，因为自适应需要*/
 @media (max-width: 767px) {
     .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
         color: #777;
@@ -306,6 +404,7 @@ fieldset[disabled] .navbar-custom .btn-link:focus {
 }
 
 
+/*导航栏自定义样式结束*/
 
 
 /*
@@ -316,16 +415,20 @@ fieldset[disabled] .navbar-custom .btn-link:focus {
 
 }
 
+/*这里很重要，掌握的不是很好，也就是把这个div当成一个容器*/
 #main_ad > .carousel-inner > .item {
+     /*背景图片不要重复啊*/
      background-repeat:no-repeat;
+     /*背景图，一直让它居中*/
      background-position: center center;
      /*-webkit-background-size:;*/
-     /*上面这个基本不写*/
+     /*上面这个基本不写，这个意思就是图片永远覆盖这这个容器么？？所以当长条图的宽度大于盒子的宽度的时候，这个图片还是居中显示*/
      background-size: cover;
  }
 /*什么时候不可以使用410的高度，当屏幕的高度*/
 
 /*可以通过媒体查询，控制高度，*/
+
 
 /*当屏幕宽度大于768的时候，就会去执行*/
 @media (min-width: 768px) {
@@ -336,6 +439,7 @@ fieldset[disabled] .navbar-custom .btn-link:focus {
 
 
 #main_ad > .carousel-inner > .item > img{
+    /*让这个图片撑大*/
     width: 100%;
 }
 

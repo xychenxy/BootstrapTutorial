@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html
+        onselectstart="return false;"
+        lang="en" class="o2_wide">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <title>饥饿英语</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/demo/css/sbs_base.css">
+    <link rel="stylesheet" type="text/css" href="/static/demo/css/sbs_component.css">
+    <link rel="stylesheet" href="/static/demo/css/pace-mytheme.css"/>
+
+
+    <style>
+        .content-wrapper {
+
+            margin-top: 0px;
+        }
+
+        .space {
+            height: 10px;
+            background: #f6f6f6;
+        }
+
+        .collo_section {
+            margin-top: -11px;
+            padding-top: 1px;
+            background: #ffffff;
+            position: relative;
+            min-height: 580px;
+            padding: 22px 22px;
+        }
+
+        .head-title {
+            color: #262728;
+            font-size: 22px;
+            font-family: 'PingFang Bold', 'Microsoft YaHei', sans-serif;
+        }
+
+        .test-desc {
+            line-height: 25px;
+            margin-top: 23px;
+            color: #262728;
+            font-size: 12px;
+            font-family: 'PingFang Regular', 'Microsoft YaHei', sans-serif;
+        }
+
+        .line {
+            margin: 0 auto;
+            margin-top: -5px;
+            width: 967px;
+            border-bottom: 1px solid #fecc2e;
+        }
+
+        .submit_btn {
+
+        }
+
+        .idea-input {
+            position: relative;
+        }
+
+        .speaking-myanswer {
+            margin: 0 22px 26px 22px;
+        }
+
+        .myview {
+            height: 42px;
+            width: 120px;
+            color: #fecc2e;
+            border-radius: 21px;
+            background-color: #fff;
+            font-family: 'PingFangSC-Medium', 'Microsoft YaHei', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            border: 2px solid #fecc2e
+        }
+
+        .myview:hover {
+            color: white;
+            background-color: #fecc2e;
+        }
+
+        #btnUpload {
+            height: 42px;
+            width: 120px;
+            color: #fecc2e;
+            border-radius: 21px;
+            background-color: #fff;
+            font-family: 'PingFangSC-Medium', 'Microsoft YaHei', sans-serif;
+            font-size: 18px;
+            font-weight: 500;
+            border: 2px solid #fecc2e
+        }
+
+        #btnUpload:hover {
+            color: white;
+            background-color: #fecc2e;
+        }
+
+        #imgguocheng {
+            -webkit-animation: circle 1s infinite linear; /*匀速 循环*/
+        }
+
+        @-webkit-keyframes circle {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .uncheck {
+            background: url("/static/demo/images/uncheck.png") no-repeat 0px 15px;
+        }
+
+        .checked {
+            background: url("/static/demo/images/checked.png") no-repeat 0px 15px;
+        }
+
+        .pigai {
+            cursor: pointer;
+            margin-right: 20px;
+            height: 49px;
+            line-height: 49px;
+            font-size: 16px;
+            padding-left: 26px;
+            color: #262728;
+            font-size: 16px;
+            font-family: 'PingFang Regular', 'Microsoft YaHei', sans-serif;
+        }
+
+        .pigai_disabled {
+            cursor: pointer;
+            margin-right: 20px;
+            float: right;
+            height: 49px;
+            line-height: 49px;
+            font-size: 16px;
+            padding-left: 26px;
+            color: #262728;
+            font-size: 16px;
+            font-family: 'PingFang Regular', 'Microsoft YaHei', sans-serif;
+        }
+
+        .note_label {
+            font-size: 16px;
+            color: #0171a9;
+            border-left: 3px solid #0171A9;
+            padding-left: 5px;
+            height: 24px;
+            line-height: 24px;
+            margin-bottom: 10px
+        }
+
+        .buypigai {
+            margin-right: 20px;
+            height: 49px;
+            line-height: 49px;
+            font-size: 16px;
+            padding-left: 26px;
+            color: #262728;
+            font-size: 16px;
+            font-family: 'PingFang Regular', 'Microsoft YaHei', sans-serif;
+        }
+
+        .syno_section {
+            padding: 0 22px;
+        }
+
+        .test-desc p img {
+            max-width: 100%;
+        }
+
+        .ueditor-content {
+            padding-left: 8px;
+            font-size: 14px;
+        }
+
+        #need_reply_box {
+
+        }
+
+        .firstTitle {
+            cursor: pointer;
+            font-size: 16px;
+            color: #0171a9;
+            border-left: 3px solid #0171A9;
+            padding-left: 5px;
+            height: 24px;
+            line-height: 24px;
+            margin-bottom: 10px
+        }
+
+        .ueditor-content {
+            margin-top: 22px;
+        }
+
+        .firstTitleContent {
+            padding-bottom: 22px;
+        }
+    </style>
+
+    <link rel="icon" href="/static/demo/images/favicon.png">
+    <style>
+        a:hover, a:visited, a:link {
+            text-decoration: none;
+        }
+
+        div:hover, div:visited, div:link {
+            text-decoration: none;
+        }
+
+        textarea:focus {
+            outline: none;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .triangle {
+            display: none;
+            margin: 0 auto;
+            width: 32px;
+            height: 0px;
+            border-left: 15px solid transparent;
+            border-right: 14px solid transparent;
+            border-bottom: 19px solid #f6f6f6;
+            z-index: 3;
+        }
+
+        td {
+            border: 1px solid #ccc;
+        }
+
+        .header-right .active {
+            color: #fca429;
+            font-weight: 600;
+        }
+
+        input::-ms-clear {
+            display: none;
+        }
+        .blink{
+            line-height: 25px !important;
+        }
+
+        audio{
+            width: 600px;
+        }
+    </style>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?775907ca626681a3ab2ae0fdc6e52f64";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body class="index">
+
+
+
+<div class="content-wrapper">
+
+    <div class="space"></div>
+    <div style="    width: 90%;margin: 0 auto">
+        <div class="syno_section ResizeSection" style="height:100vh;width: 49.5%;float: left;overflow: hidden">
+            <div style="width: 100%;padding: 25px 0px 0px 0px;">
+                <p class="head-title">#117:小孩喜欢看电视的原因和解决方法
+                </p>
+            </div>
+            <div class="test-desc">
+                Studies suggest that children spend more time watching TV than they did in the past and spend less on doing active or creative things. Why do you think it is the case? What measures and methods can be used to tackle it?
+            </div>
+
+
+
+
+
+            <div id="cn-section" style="">
+                <div id="refer_guandian"
+                     style="margin-top: 10px">
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="601"
+                         min="5">
+                        <div class="firstTitle" title="开头段替换词"
+                             data-hasperm="true"
+                             defaultShow="False"> 开头段替换词<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <p>Studies suggest that： research indicates that/shows that</p><p>children spend more time watching TV: screen time has increased, spend many hours</p><p>doing active or creative things: lead an active life, engage in outdoor and creative activities.&nbsp;</p><p><br/> </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="602"
+                         min="5">
+                        <div class="firstTitle" title="开头段范例"
+                             data-hasperm="true"
+                             defaultShow="False"> 开头段范例<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <p>Research has shown that children today spend many hours watching TV, instead of doing outdoor or creative activities. This is a problem which merits attention and demands solutions. (7)<br/> </p><p>There is ample evidence that children&#39;s screen time has increased rapidly and displaced the time for outdoor or creative activities. Parents should take immediate action to fix this problem. (7)<br/> </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="cn-answer-box"
+                     style="margin-top:22px; border-top: 1px solid #e9e9e9; ">
+                    <div style=" display: none ">
+                        <a min="5" class="startWritingGuandian"
+                           style="float: right; font-size: 16px; margin: 20px 0px; cursor: pointer; color: #fecc2e">
+                            <img src="/static/images/timer.jpg" style="margin-top: -2px"/>
+                            点击开始作答观点
+                        </a>
+                        <span style="float: right; font-size: 16px;margin: 20px 0px;display: none;color: #fecc2e">
+                            <img src="/static/images/timer.jpg" style="margin-top: -2px"/>
+                                倒计时：
+                            <span class="guandian_label" style="color: #fecc2e; margin-left: 5px">00:00:00</span>
+                            </span>
+                        <div style="clear: both"></div>
+                    </div>
+                    <textarea id="my_cn_text" name="myview" rows="5" placeholder="请输入观点"
+                              disabled="disabled"
+                              style="height: 30vh;width: 100%;resize:none;vetical-align:top">确定C
+
+A 电视节目丰富多样 B 孩子被吸引 C 孩子喜欢看电视
+A 户外活动选择少 难度大 B 孩子畏难心理 C 孩子不做户外活动
+
+A 父母引导孩子一起做户外活动 B 孩子受到鼓舞 C 孩子减少看电视
+</textarea>
+
+                    <div style="text-align: right">
+
+                        <a style="font-size: 16px; margin: 20px 0px;color: #fecc2e;display:none">
+                            输入观点查看范文
+                        </a>
+                        <input id="submit_guandian" type="button" class="border_radius myview"
+                               style="margin-top: 7px; display:none "
+                               value="提交"/>
+                        <input id="update_guandian" type="button" class="border_radius myview update_input"
+                               style="margin-top: 7px;  "
+                               data-type="guandian"
+                               value="修改"/>
+
+                    </div>
+                </div>
+
+                <div id="guandian_after"
+                     style="margin-top: 10px; display: block ">
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="1620"
+                         min="5">
+                        <div class="firstTitle" title="主体段二（其他观点）"
+                             data-hasperm="true"
+                             defaultShow="False"> 主体段二（其他观点）<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <p>A 学校关注小孩的学习，而不是小孩的业余爱好和全面发展 B 不愿意花钱在设施 C 小孩看电视</p><p>解释（背景）：学校的预算有限</p><p>解释（A-B）：课外活动需要资源，包括场地和老师去支持，不会去帮助孩子提升这方面的能力。</p><p><br/></p>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_1620_1','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    拓展思路:<img style="margin-left: 8px;"
+                                              class="  xialaup "
+                                              src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_1620_1"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p style="white-space: normal;">解释（背景）：学校的预算有限</p><p style="white-space: normal;">解释（A-B）：课外活动需要资源，包括场地和老师去支持，不会去帮助孩子提升这方面的能力。</p><p><br/></p>
+
+                                    </div>
+                                </div>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_1620_2','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    范文:<img style="margin-left: 8px;"
+                                            class="  xialaup "
+                                            src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_1620_2"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p>Another reason is that schools today give priority to the academic performance of children and choose not to invest in the facilities that support creative or active activities. Most schools have a limited/tight budget, and &nbsp;PE classes, musial activities or art lessons normally require resources and facilities, such as playgrounds, musical instruments and teachers who can teach different classes. Schools are unwlling to support children to develop skills for these hobbies, and without any other way to spend free time/leisure time, children would have no choice but to watch TV. （7）</p><p><br/></p>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="600"
+                         min="5">
+                        <div class="firstTitle" title="学生的观点点评"
+                             data-hasperm="true"
+                             defaultShow="False"> 学生的观点点评<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <table cellspacing="0" cellpadding="0"><tbody><tr class="firstRow"><td width="284" valign="top" style="border-width: 1px; border-color: windowtext; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:宋体;color:#0D0D0D">学生的观点</span></p></td><td width="284" valign="top" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-top-color: windowtext; border-right-color: windowtext; border-bottom-color: windowtext; border-left: none; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:宋体;color:#0D0D0D">点评</span></p></td></tr><tr><td width="284" valign="top" style="border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-color: windowtext; border-bottom-color: windowtext; border-left-color: windowtext; border-top: none; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A</span><span style="font-size:16px;font-family:宋体;color:#0D0D0D">相关部门制定新规定</span><span style="font-size:16px;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">B</span><span style="font-size:16px;font-family:宋体;color:#0D0D0D">对电视中的少儿节目进行一定数量质量限制</span><span style="font-size:16px;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">C</span></p><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:宋体;color:#0D0D0D">让孩子减少看电视时间，增加活动创造时间</span></p></td><td width="284" valign="top" style="border-top: none; border-left: none; border-bottom-width: 1px; border-bottom-color: windowtext; border-right-width: 1px; border-right-color: windowtext; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:宋体;color:#0D0D0D">不是很合理。小孩看电视不一定是因为少儿节目多，成人节目他们也是通杀的。</span></p></td></tr><tr><td width="284" valign="top" style="border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-color: windowtext; border-bottom-color: windowtext; border-left-color: windowtext; border-top: none; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A</span><span style="font-size:16px;font-family:宋体;color:#0D0D0D">制定法律，</span><span style="font-size:16px;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">B</span><span style="font-size:16px;font-family:宋体;color:#0D0D0D">强制父母陪同孩子，</span><span style="font-size:16px;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">C</span><span style="font-size:16px;font-family:宋体;color:#0D0D0D">完成活动</span></p></td><td width="284" valign="top" style="border-top: none; border-left: none; border-bottom-width: 1px; border-bottom-color: windowtext; border-right-width: 1px; border-right-color: windowtext; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:宋体;color:#0D0D0D">这个感觉实现起来比较难。政府怎么监管父母的行为，每天家访和抽查吗？</span></p></td></tr><tr><td width="284" valign="top" style="border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-right-color: windowtext; border-bottom-color: windowtext; border-left-color: windowtext; border-top: none; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:宋体;color:#0D0D0D">娱乐模式成熟，更容易吸引注意力，看电视的更多</span></p></td><td width="284" valign="top" style="border-top: none; border-left: none; border-bottom-width: 1px; border-bottom-color: windowtext; border-right-width: 1px; border-right-color: windowtext; padding: 0px 7px;"><p style="margin-bottom:0;margin-bottom:0;line-height:   normal"><span style="font-size:16px;font-family:宋体;color:#0D0D0D">太过空泛。模式成熟是什么？</span></p></td></tr></tbody></table><p><br/> </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="603"
+                         min="5">
+                        <div class="firstTitle" title="主体段一"
+                             data-hasperm="true"
+                             defaultShow="False"> 主体段一<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A&nbsp; </span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">父母忙</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">没有时间陪小孩玩</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">小孩看电视</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A-B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：</span> <span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">加班、应酬、出差、培训</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">B-C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：电视节目丰富，很容易吸引小孩注意，小孩不会影响父母工作</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">对比：室外活动需要和别人交流，不放心</span></p><p><br/> </p>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_603_1','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    拓展思路:<img style="margin-left: 8px;"
+                                              class="  xialaup "
+                                              src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_603_1"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A-B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：</span> <span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">加班、应酬、出差、培训</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">B-C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：电视节目丰富，很容易吸引小孩注意，小孩不会影响父母工作</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">对比：室外活动需要和别人交流，不放心</span></p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_603_2','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    词伙:<img style="margin-left: 8px;"
+                                            class="  xialaup "
+                                            src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_603_2"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Lead a busy life, spend time</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Work long hours, attend networking events, travel for business, receive training</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">TV programmes, grab attention, disturb parents</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Outdoor activities</span></p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_603_3','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    范文:<img style="margin-left: 8px;"
+                                            class="  xialaup "
+                                            src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_603_3"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p></p><p>The first reason why children spend more time watching TV than ever is that their parents lead a busy life and have no time to accompany children to do different activities. Adults have to work long hours, attend networking events, travel for business and receive training, which can affect their family life. Therefore, they permit children to watch TV, which can easily grab attention, and&nbsp; children would not interfere with their work. In contrast, parents are unwilling to allow children to do creative or active activities outside home, which may not be safe.&nbsp; (7+)</p><p><br/></p><p>The first reason why children today are addicted to television viewing is that they cannot do other extra-curricula activities without the company of their parents. Struggling to survive a competitive world of work, adults have to work long hours every day, and their leisure time is predominantly used for other work-related activities, such as attending networking events, business trips and job training. They would rather see their children watch TV safely at home, than do other activities, such as playing sport or games with others, since they are afraid that their children are susceptible to influences outside home. (7+)&nbsp;</p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="604"
+                         min="5">
+                        <div class="firstTitle" title="主体段二"
+                             data-hasperm="true"
+                             defaultShow="False"> 主体段二<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A</span><span style="font-size:16px;line-height: 115%;font-family:宋体;color:#0D0D0D">城市的空间小</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> B </span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">没有什么地方让小孩玩体育，或者是搞一些创造性的活动</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">小孩看电视</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A-B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：建房子，修路，操场、公园没有了，</span> <span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">小孩不能够玩耍</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">社区中心和大家可以用来搞艺术活动的公共场所也减少了</span></p><p><br/> </p>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_604_1','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    拓展思路:<img style="margin-left: 8px;"
+                                              class="  xialaup "
+                                              src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_604_1"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A-B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：建房子，修路，操场、公园没有了，</span> <span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">小孩不能够玩耍</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">社区中心和大家可以用来搞艺术活动的公共场所也减少了</span></p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_604_2','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    词伙:<img style="margin-left: 8px;"
+                                            class="  xialaup "
+                                            src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_604_2"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Open space, play sport, do creative activities</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Housing development, building new roads, playgrounds and parks</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Community centres, art activities</span></p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_604_3','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    范文:<img style="margin-left: 8px;"
+                                            class="  xialaup "
+                                            src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_604_3"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p>Besides, there is less open space available for playing sport and doing creative activities. Playgrounds and parks have been closed to make way for housing development and the construction of new roads, so children cannot find any place to play games. They are also not able to find commuty centres or other places where they can engage in art activities. (6.5)</p><p>Another cause of increased screen time among today’s children is the limited access to open spaces and facilities suitable for other activities. They cannot find any place in the community to play games and sport with their peers since playgrounds and parks have been closed to make way for housing development and the construction of new roads. Nor can they find community centres or other places where they can engage in art activities, as most land in cities has been saved for the construction of residential or business buildings. (7+)</p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="605"
+                         min="5">
+                        <div class="firstTitle" title="主体段三 （解决方法）"
+                             data-hasperm="true"
+                             defaultShow="False"> 主体段三 （解决方法）<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"></span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A </span><span style="font-size:16px;line-height: 115%;font-family:宋体;color:#0D0D0D">校园增加设施和课程</span><span style="font-size:16px;line-height: 115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> B</span><span style="font-size: 16px;line-height:115%;font-family:宋体;color:#0D0D0D">让小孩可以玩体育和上艺术课等</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">因此不看电视</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">—</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：小孩在其他活动中获得乐趣</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A</span><span style="font-size:16px;line-height: 115%;font-family:宋体;color:#0D0D0D">政府注意宣传</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> B</span><span style="font-size:16px;line-height: 115%;font-family:宋体;color:#0D0D0D">鼓励家长多陪小孩出去玩</span><span style="font-size:16px;line-height: 115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> C</span><span style="font-size: 16px;line-height:115%;font-family:宋体;color:#0D0D0D">帮助小孩形成健身和搞艺术的习惯</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A-B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：告诉家长童年形成一些好的习惯的重要性</span></p><p><br/> </p>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_605_1','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    拓展思路:<img style="margin-left: 8px;"
+                                              class="  xialaup "
+                                              src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_605_1"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A </span><span style="font-size:16px;line-height: 115%;font-family:宋体;color:#0D0D0D">校园增加设施和课程</span><span style="font-size:16px;line-height: 115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> B</span><span style="font-size: 16px;line-height:115%;font-family:宋体;color:#0D0D0D">让小孩可以玩体育和上艺术课等</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">因此不看电视</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">—</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">C</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：小孩在其他活动中获得乐趣</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A</span><span style="font-size:16px;line-height: 115%;font-family:宋体;color:#0D0D0D">政府注意宣传</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> B</span><span style="font-size:16px;line-height: 115%;font-family:宋体;color:#0D0D0D">鼓励家长多陪小孩出去玩</span><span style="font-size:16px;line-height: 115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D"> C</span><span style="font-size: 16px;line-height:115%;font-family:宋体;color:#0D0D0D">帮助小孩形成健身和搞艺术的习惯</span></p><p><span style="font-size:16px;line-height:115%;font-family: 宋体;color:#0D0D0D">解释（</span><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">A-B</span><span style="font-size:16px;line-height:115%;font-family:宋体;color:#0D0D0D">）：告诉家长童年形成一些好的习惯的重要性</span></p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_605_2','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    词伙:<img style="margin-left: 8px;"
+                                            class="  xialaup "
+                                            src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_605_2"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Increase facilities, run courses, play sport</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Find enjoyment</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Awareness campaigns, outdoor activities</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">Form positive habits</span></p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+                                <div
+
+                                        onclick="doggle_element('#collapse_605_3','#parent-section')"
+
+
+                                        style="cursor:pointer;font-size: 14px; color: #0171a9; padding-left: 5px; height: 24px; line-height: 24px; margin-bottom: 10px">
+                                    范文:<img style="margin-left: 8px;"
+                                            class="  xialaup "
+                                            src="/static/demo/images/xiala.png">
+                                </div>
+
+                                <div id="collapse_605_3"
+                                     class="collapse ">
+                                    <div class="ueditor-content">
+
+                                        <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">There are two solutions to this problem. Firstly, schools can increase facilities and run courses to allow children to play sport and attend art courses after school. They can thus find enjoyment in these activities. Secondly, the government can launch awareness campaigns to encourage parents to spend more time with their children. Adults should understand the importance of forming some positive habits in childhood. The involvement of parents can help shift children’s attention from TV programmes to other activities. (6.5)</span></p><p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">This problem can be solved possibly by two methods. The first approach is to increase facilities and run courses at school, offering children more options after they finish school work. They can find enjoyment in playing sport, learning painting and playing with legos before their parents pick them up. In addition to this, the government can launch awareness campaigns to encourage parents to spend more time with their children, by highlighting the fact that forming some positive habits such as playing a music instrument can benefit children for a lifetime. Parents who realise the chronic effect of television viewing will take a more active role in children’s leisure activities. (7+)</span></p><p><br/> </p>
+
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="ueditorParent" data-type="选项" data-id="737"
+                         min="5">
+                        <div class="firstTitle" title="结尾段范例"
+                             data-hasperm="true"
+                             defaultShow="False"> 结尾段范例<img
+                                style="margin-left: 8px;" src="/static/demo/images/xiala.png">
+                        </div>
+
+                        <div class="firstTitleContent collapse ">
+
+                            <div class="ueditor-content" >
+                                <p><span style="font-size:16px;line-height:115%;font-family:&#39;Arial&#39;,&#39;sans-serif&#39;;color:#0D0D0D">In conclusion, parents and schools should play a bigger part in changing the ways children spend their time after school.&nbsp;</span></p><p><br/> </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <div id="en-section"
+                 style=" ">
+
+                <div id="refer_answer"
+                     style="margin-top: 10px">
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="syno_section ResizeSection"
+             style="padding: 0 22px;    background: #ffffff;height:100vh;width: 49.5%;float: right;">
+            <div id="en-answer-box" style="height: 65%;">
+                <div style="">
+                    <a min="30" class="startWritingZhengwen"
+                       style="float: right; font-size: 16px; margin: 20px 0px; cursor: pointer; color: #fecc2e">
+                        <img src="/static/images/timer.jpg" style="margin-top: -2px"/>
+                        点击开始作答正文
+                    </a>
+                    <span style="float: right; font-size: 16px;margin: 20px 0px;display: none;color: #fecc2e">
+                            <img src="/static/images/timer.jpg" style="margin-top: -2px"/>
+                                倒计时：
+                            <span class="zhengwen_label" style="color: #fecc2e; margin-left: 5px">00:00:00</span>
+                            </span>
+                    <div style="clear: both"></div>
+                </div>
+                <textarea id="my_en_text" name="myview" rows="5" placeholder="请输入英文(ctrl+V可粘贴文档)"
+                          onkeyup="wordStatic(this,'great');"
+
+                          style="height: 90%;     width: 100%;resize:none;vetical-align:top"></textarea>
+                <div style="margin-top: 0" class=" test-desc word-count">Word count:<i>0</i></div>
+                <div id="box-upload" style="text-align: left">
+
+                    <div id="need_reply_box">
+
+
+
+                        <div class="buypigai uncheck">申请批改（你可申请批改次数为0，<a href='/trades/buy/zuowen/2'
+                                                                         style="color: #fca429">点击购买</a>）
+                        </div>
+
+
+
+
+                    </div>
+                    <div>
+                        <a style="font-size: 16px;color: #fecc2e;">
+
+                        </a>
+                        <input id="submit_answer" type="button" class="border_radius myview"
+                               style="margin-top: 7px;  "
+
+                               value="提交"/>
+                        <input type="button" class="border_radius myview update_input"
+                               style="margin-top: 7px;    display:none "
+                               data-type="answer" value="修改"/>
+
+                    </div>
+
+
+                </div>
+                <div id="answer_after"
+                     style="margin-top: 10px; display:none ">
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div style="clear: left"></div>
+        <div class="space"></div>
+        <div class="space"></div>
+        <div class="comment_section">
+            <div style="width: 100%;padding: 25px 22px 6px 22px;">
+                <p class="head-title">题目讨论</p>
+            </div>
+
+            <style>
+
+                #comment_page a {
+                    padding: 0;
+                    margin: 0;
+                    text-align: center;
+                    line-height: 24px;
+                    border-radius: 26px;
+                    height: 26px;
+                    border: solid 2px #fecc2f;
+                    color: #fecc2f;
+                    margin-right: 12px;
+                }
+
+                #comment_page .disabled a {
+                    cursor: not-allowed;
+                }
+
+                #comment_page a:hover, #comment_page a:focus {
+                    background-color: white;
+                    cursor: pointer;
+                }
+
+                #comment_page .disabled a:hover, #comment_page .disabled a:focus {
+                    cursor: not-allowed;
+                }
+
+                #comment_page .active a {
+                    color: white;
+                    background-color: #fecc2f;
+                    border-color: #fecc2f;
+                }
+
+                #comment_page .btaction:hover {
+                    color: white;
+                    background-color: #fecc2f;
+                    border-color: #fecc2f;
+                }
+
+                #comment_page .disabled .btaction:hover {
+                    color: #fecc2f;
+                    background-color: white;
+                }
+
+                .btnum {
+                    width: 26px;
+                }
+
+                .btaction {
+                    width: 60px;
+                }
+
+                #myfaqsubmit {
+                    margin-right: 52px;
+                    margin-top: 10px;
+                    height: 42px;
+                    width: 120px;
+                    color: #fecc2e;
+                    border-radius: 21px;
+                    float: right;
+                    background-color: white;
+                    font-family: 'PingFangSC-Medium', 'Microsoft YaHei', sans-serif;
+                    font-size: 18px;
+                    font-weight: 500;
+                    border: 2px solid #fecc2e;
+                }
+
+                #myfaqsubmit:hover {
+                    color: white;
+                    background-color: #fecc2e;
+                }
+            </style>
+            <div style="position: relative;background-color: #fff;padding-bottom: 1px" class="father_comments">
+                <div style="position: relative;  width: 1016px; margin: 0 auto; margin-bottom: 50px"
+                     class="son_comments">
+
+                    <div class="clearfix"></div>
+                    <div style="margin:0 auto;width: 910px" id="commoncommentarea">
+
+
+
+                        <ul class="list-group" id="comment_list">
+                        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                    <div style="margin-top: 20px;border-top: 1px solid #fca429;text-align: center;padding-top: 10px;position: relative;margin-right: 22px; margin-left: 22px">
+                        <a style="color:#fca429;position: absolute;top:-10px;background-color: white;left: 425px;font-size: 16px ">
+                            <div style="display: inline-block;height: 8px;padding: 0 10px">
+                                <div style="width: 4px;height: 4px;background-color: #fca429;border-radius: 2px;border: 1px solid white;"></div>
+                            </div>
+                            我的留言
+                            <div style="display: inline-block;height: 8px;padding: 0 10px">
+                                <div style="width: 4px;height: 4px;background-color: #fca429;border-radius: 2px;border: 1px solid white;"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="margin:0 auto;width: 910px" id="mycommentarea">
+                        <ul class="list-group" id="my_comment_area" style="margin-top: 30px">
+                        </ul>
+                    </div>
+
+                    <div class="my_post_comment" style="min-height: 50px;margin-top: 40px">
+                        <form id="maincontact" method="post"
+                              action="/addfaqcommon/">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12" style="position: relative;text-align: center ">
+                                    <input type="hidden" name="comment_type" value="大作文"/>
+                                    <input type="hidden" name="comment_identity" value="title:小孩喜欢看电视的原因和解决方法,id:117"/>
+                                    <input type="hidden" name="comment_url" value=""/>
+                                    <textarea placeholder="写下你想说的话" name="maincontactmsg" id="maincontactmsg" rows="5"
+                                              style="resize:none; width: 910px; overflow: hidden; font-family: 'PingFangSC-Regular','Microsoft YaHei',sans-serif; font-size: 16px; "></textarea>
+                                    <input type="button" class="border_radius" id="myfaqsubmit"
+
+                                           onclick="uploadmaincontact()"
+
+                                           id="main_submit" value="提交留言"/>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <input type='hidden' name='csrfmiddlewaretoken' value='gBk6MXdLPEncczo9xkVX8nuqghW4Km6fmZJjldSoMiA158GTPz7FUkmfTshJlobg' />
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+<div class="footer-wrapper">
+
+    <div class="footer-content-wrapper">
+        <ul>
+            <a href="/about/publish">
+                <li class="lf words">关于我们</li>
+            </a>
+            <li class="lf words">|</li>
+            <li class="lf words">热推课程</li>
+            <li class="lf words">|</li>
+            <li class="lf words">雅思会员</li>
+            <li class="lf words">|</li>
+            <li class="lf words">名师介绍</li>
+            <li class="lf words">|</li>
+            <li class="lf words">意见反馈</li>
+            <li class="lf words">|</li>
+            <li class="lf words">联系我们</li>
+        </ul>
+        <div class="icp">粤ICP备14100719号</div>
+
+
+    </div>
+</div>
+<script src="/static/js/jquery-2.2.3.js" type='text/javascript'></script>
+<script src="/static/js/bootstrap.min.js" type='text/javascript'></script>
+<script type="text/javascript" src="/static/demo/js/jquery.nicescroll.js"></script>
+<script src="/static/js/plugins/layer/layer.js" type='text/javascript'></script>
+<script type="text/javascript" src="/static/demo/js/user_infor.js"></script>
+<script type="text/javascript" src="/static/demo/js/sbs.js"></script>
+<script src="/static/demo/js/pace.js"></script>
+
+<script>
+
+    new MessageAlert();
+    var formatmp3 = new FormatMp3();
+    var setcommenturl=new SetCommentUrl();
+
+    var urlstr = location.href;
+    var urlstatus = false;
+    var is_ielts = false;
+    var is_collogram = false;
+    var is_about = false;
+    //
+    $('#navbar li a').each(function () {
+        if ((urlstr + '/').indexOf($(this).attr('href').replace(/(^\s*)|(\s*$)/g, "")) > -1 && $(this).attr('href') != '' && $(this).attr('href') != '/' && $(this).attr('href') != '#') {
+            $(this).parent().addClass('current');
+            urlstatus = true;
+        }
+        else {
+            $(this).parent().removeClass('current');
+        }
+    });
+    if (urlstr.indexOf('users/home') > -1 || urlstr.indexOf('usercourse') > -1 || urlstr.indexOf('coursenotice') > -1 || urlstr.indexOf('coursefile') > -1 || urlstr.indexOf('checklist') > -1) {
+        $("#geren").addClass("active");
+        urlstatus = true;
+    }
+    else {
+        $("#geren").removeClass("active");
+    }
+    if (urlstr.indexOf('users/order') > -1) {
+        $("#dingdan").addClass("active");
+        urlstatus = true;
+    }
+    else {
+        $("#dingdan").removeClass("active");
+    }
+    if (urlstr.indexOf('users/info') > -1) {
+        $("#ziliao").addClass("active");
+        urlstatus = true;
+    }
+    else {
+        $("#ziliao").removeClass("active");
+    }
+    if (urlstr.indexOf('users/guide') > -1) {
+        $("#zhidao").addClass("active");
+        urlstatus = true;
+    }
+    else {
+        $("#zhidao").removeClass("active");
+    }
+
+    if (urlstr.indexOf('survey') > -1) {
+        //$("#ielts-menu ul").show();
+        $("#survey-menu").addClass("current");
+        urlstatus = true;
+    }
+    else {
+        //$("#ielts-menu ul").hide();
+        $("#survey-menu").removeClass("current");
+    }
+
+    if (urlstr.indexOf('/course/') > -1 || urlstr.indexOf('/buy/vip') > -1 || urlstr.indexOf('/buy/zuowen') > -1 || urlstr.indexOf('/buy/kouyu') > -1) {
+        //$("#ielts-menu ul").show();
+        $("#course-menu").addClass("current");
+        urlstatus = true;
+    }
+    else {
+        //$("#ielts-menu ul").hide();
+        $("#course-menu").removeClass("current");
+    }
+
+
+
+
+
+
+
+
+
+
+
+    if (urlstr.indexOf('article') > -1) {
+        //$("#ielts-menu ul").show();
+        $("#article-menu").addClass("current");
+        urlstatus = true;
+    }
+    else {
+        //$("#ielts-menu ul").hide();
+        $("#article-menu").removeClass("current");
+    }
+    if (urlstr.indexOf('dxzy') > -1 || urlstr.indexOf(encodeURI('大学作业')) > -1) {
+        //$("#ielts-menu ul").show();
+        $("#dxzy-menu").addClass("current");
+        urlstatus = true;
+    }
+    else {
+        //$("#ielts-menu ul").hide();
+        $("#dxzy-menu").removeClass("current");
+    }
+    if (urlstr.indexOf(encodeURI('雅思')) > -1) {
+        //$("#ielts-menu ul").show();
+        $("#ielts-title").css('color', '#fca429');
+        is_ielts = true;
+    }
+    else if (urlstr.indexOf('ielts') > -1) {
+        $("#ielts-title").css('color', '#fca429');
+        $("#ielts-menu").addClass("current");
+        urlstatus = true;
+        is_ielts = true;
+    }
+    else {
+        //$("#ielts-menu ul").hide();
+        $("#ielts-title").css('color', '#262728');
+        is_ielts = false;
+    }
+
+    if (urlstr.indexOf('collocation') > -1 || urlstr.indexOf('grammar') > -1 || urlstr.indexOf('synno') > -1) {
+        //$("#collo-gram ul").show();
+        $("#collo-gram-title").css('color', '#fca429');
+        $("#collo-gram-title").parent().addClass("current");
+        is_collogram = true;
+
+        urlstatus = true;
+
+    }
+    else {
+        //$("#collo-gram ul").hide();
+        $("#collo-gram-title").css('color', '#262728');
+        is_collogram = false;
+    }
+
+    if (urlstr.indexOf('about') > -1 || urlstr.indexOf('/book') > -1) {
+        //$("#collo-gram ul").show();
+
+
+
+        $("#about-title").css('color', '#fca429');
+        $("#about-menu").addClass("current");
+        is_about = true;
+
+        urlstatus = true;
+
+    }
+    else {
+        //$("#collo-gram ul").hide();
+        $("#about-title").css('color', '#262728');
+        is_about = false;
+    }
+
+    if (!urlstatus) {
+        $('#navbar li').eq(0).addClass('current');
+    }
+
+
+    $("#ielts-menu").hover(function () {
+            if (!is_ielts) {
+                $("#ielts-title").css('color', '#fca429');
+            }
+            $("#ielts-menu ul").show();
+        },
+
+        function () {
+            if (!is_ielts) {
+                $("#ielts-title").css('color', '#262728');
+            }
+            $("#ielts-menu ul").hide();
+        }
+    );
+
+    $("#collo-gram").hover(function () {
+            if (!is_collogram) {
+                $("#collo-gram-title").css('color', '#fca429');
+            }
+            $("#collo-gram ul").show();
+        },
+        function () {
+            if (!is_collogram) {
+                $("#collo-gram-title").css('color', '#262728');
+            }
+            $("#collo-gram ul").hide();
+        }
+    );
+
+    $("#about-menu").hover(function () {
+            if (!is_about) {
+                $("#about-title").css('color', '#fca429');
+            }
+            $("#about-menu ul").show();
+        },
+        function () {
+            if (!is_about) {
+                $("#about-title").css('color', '#262728');
+            }
+            $("#about-menu ul").hide();
+        }
+    );
+
+    function resetTriangle() {
+        if ($(window).scrollTop() > 27) {
+
+            $('.current .triangle').hide();
+
+        } else {
+            $('.current .triangle').show();
+        }
+    }
+
+    function removeStyle() {
+        $('.removeStyle').each(function () {
+            $(this).find('*').removeAttr('style');
+        });
+    }
+
+    $().ready(function () {
+        removeStyle();
+        resetTriangle();
+        layer.config({extend: 'extend/layer.ext.js'});
+        $(window).scroll(function () {
+
+            resetTriangle();
+
+        });
+
+    });
+
+    function openWin(url) {
+        var winObj = window.open(url);
+        var loop = setInterval(function () {
+            if (winObj.closed) {
+                clearInterval(loop);
+                //alert('closed');
+                parent.location.reload();
+            }
+        }, 1);
+    }
+
+    $('.second_category').each(function () {
+            this.onmousedown = function () {
+                if (event.button == 2) {
+                    event.returnValue = false;
+                }
+            };
+
+            this.onkeydown = function () {
+                if ((event.ctrlKey) && (window.event.keycode == 67)) {
+                    event.returnValue = false;
+                }
+            };
+
+            this.oncopy = function () {
+                return false;
+            }
+        }
+    );
+</script>
+
+
+<script src="/static/js/bootstrapValidator.min.js" type='text/javascript'></script>
+<script>
+    var myodic = [];
+
+
+
+
+
+
+
+
+
+
+
+
+
+    CommentList();
+
+    function mylist_setting(p_list_id, p_setting, p_type) {
+        var olistpage = {};
+        olistpage.list_id = p_list_id;
+        olistpage.current_page = p_setting.current_page;
+        olistpage.pagelist = p_setting.pagesize;
+        olistpage.comment_type = p_setting.comment_type;
+        olistpage.comment_identity = p_setting.comment_identity;
+        olistpage.type = p_type;
+
+        olistpage.has_comments = 0;
+        myodic[p_list_id] = olistpage;
+
+        myload_paginate(olistpage.list_id);
+        myCommentList(olistpage.list_id);
+    }
+
+    function myload_paginate(l_id) {
+        var page_content = '                    <nav aria-label="Page navigation" style="float:right">\n' +
+            '                        <ul class="pagination" id="comment_page">\n' +
+            '                            <li class="disabled" id="' + l_id + '_page_previous">\n' +
+            '                                <a aria-label="Previous" onclick="mygo_previous(\'' + l_id + '\')" class="btaction">\n' +
+            '                                    <span aria-hidden="true" style="font-size: 12px; margin: 0 ">上一页</span>\n' +
+            '                                </a>\n' +
+            '                            </li>\n' +
+            '\n' +
+            '                            <li id="' + l_id + '_page_next">\n' +
+            '                                <a aria-label="Next" onclick="mygo_next(\'' + l_id + '\')" class="btaction" style="margin-right:0">\n' +
+            '                                    <span aria-hidden="true" style="font-size: 12px; margin: 0">下一页</span>\n' +
+            '                                </a>\n' +
+            '                            </li>\n' +
+            '                        </ul>\n' +
+            '                    </nav>' +
+            '<div class="clearfix"></div>';
+        $('#' + l_id).after(page_content);
+    }
+
+    function myreload_pagelist(l_id) {
+        $('#' + l_id + ' li').remove();
+        $('a.' + l_id + 'pagenum').remove();
+        myCommentList(l_id);
+    }
+
+    function mygo_previous(l_id) {
+        if ($('#' + l_id + '_page_previous').attr("class") == "disabled" || myodic[l_id].has_comments == 0) {
+            return;
+        }
+        myodic[l_id].current_page = myodic[l_id].current_page - 1;
+        myreload_pagelist(l_id);
+    }
+
+    function mygo_next(l_id) {
+        if ($('#' + l_id + '_page_next').attr("class") == "disabled" || myodic[l_id].has_comments == 0) {
+            return;
+        }
+        myodic[l_id].current_page = myodic[l_id].current_page + 1;
+        myreload_pagelist(l_id);
+    }
+
+    function mygo_current(pagenum, l_id) {
+        if (pagenum == myodic[l_id].current_page || myodic[l_id].has_comments == 0) {
+            return;
+        }
+        myodic[l_id].current_page = pagenum;
+        myreload_pagelist(l_id);
+    }
+
+    function myset_page(total, olist) {
+        var j = 0;
+        var list_id = olist.list_id;
+        if (olist.current_page == 1) {
+            $('#' + list_id + '_page_previous').addClass("disabled");
+        }
+        else {
+            $('#' + list_id + '_page_previous').removeClass("disabled");
+        }
+        if (olist.current_page == total + 1) {
+            $('#' + list_id + '_page_next').addClass("disabled");
+        }
+        else {
+            $('#' + list_id + '_page_next').removeClass("disabled");
+        }
+        if (total <= 4) {
+            for (j = total; j >= 0; j--) {
+                if (j == (olist.current_page - 1)) {
+                    $('#' + list_id + '_page_previous').after('<li class="active"><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+                else {
+                    $('#' + list_id + '_page_previous').after('<li><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+            }
+        }
+        else if (olist.current_page <= 3) {
+            for (j = 4; j >= 0; j--) {
+                if (j == (olist.current_page - 1)) {
+                    $('#' + list_id + '_page_previous').after('<li class="active"><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+                else {
+                    $('#' + list_id + '_page_previous').after('<li><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+            }
+        }
+        else if (olist.current_page >= total - 1) {
+            for (j = total; j >= total - 4; j--) {
+                if (j == (olist.current_page - 1)) {
+                    $('#' + list_id + '_page_previous').after('<li class="active"><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+                else {
+                    $('#' + list_id + '_page_previous').after('<li><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+            }
+        }
+        else {
+            for (j = olist.current_page + 1; j >= olist.current_page - 3; j--) {
+                if (j == (olist.current_page - 1)) {
+                    $('#' + list_id + '_page_previous').after('<li class="active"><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+                else {
+                    $('#' + list_id + '_page_previous').after('<li><a class="' + list_id + 'pagenum btnum" onclick="mygo_current(' + (j + 1) + ',\'' + list_id + '\')">' + (j + 1) + '</a></li>');
+                }
+            }
+        }
+    }
+
+    function myCommentList(l_id) {
+        var odlist = myodic[l_id];
+        var query = {};
+        query.type = myodic[l_id].type;
+        query.comment_type = myodic[l_id].comment_type;
+        query.comment_identity = myodic[l_id].comment_identity;
+        query.current_page = myodic[l_id].current_page;
+        $.ajax({
+            type: 'POST',
+            url: "/faqcommon/",
+            data: query,
+            dataType: 'json',
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", "gBk6MXdLPEncczo9xkVX8nuqghW4Km6fmZJjldSoMiA158GTPz7FUkmfTshJlobg");
+            },
+            success: function (data) {
+                if (data.rows.length > 0) {
+                    myodic[l_id].has_comments = 1;
+                    var total = parseInt((data.total - 1) / odlist.pagelist);
+                    myset_page(total, odlist);
+
+                    for (var i = 0; i < data.rows.length; i++) {
+                        var info = data.rows[i];
+                        var li_content = '';
+                        if (info.reply == '') {
+                            li_content = '                <li style="margin-bottom: 40px">\n' +
+                                '                    <div class="head" style="float:left; height: 100px; width: 70px">\n' +
+                                '                        <img src="' + info.head + '"\n' +
+                                '                             style="width: 60px; height: 60px;border-radius: 30px">\n' +
+                                '                    </div>\n' +
+                                '                    <div class="cont" style="float:left;width:840px">\n' +
+                                '                        <div class="userinfo"\n' +
+                                '                             style="font-size: 16px; font-family: \'PingFangSC-Medium\',\'Microsoft YaHei\',sans-serif; color: #262728; margin-bottom: 14px">\n' +
+                                '                            ' + info.user + '\n' +
+                                '                        </div>\n' +
+                                '                        <div class="usercommnet"\n' +
+                                '                             style="font-size: 16px; font-family: \'PingFangSC-Regular\',\'Microsoft YaHei\',sans-serif; color: #262728; margin-bottom: 14px; word-break: break-all; margin-left: 70px">\n' +
+                                '                            ' + info.content + '\n' +
+                                '                        </div>\n' +
+                                '                        <div class="useraction" style="margin-bottom: 14px">\n' +
+                                '                            <span style="font-size: 12px;font-family: \'PingFangSC-Regular\',\'Microsoft YaHei\',sans-serif; color:#a0a3ae; margin: 0">' + info.add_time + '</span>\n' +
+                                '                            <a style="float:right;display: none"><i class="fa fa-commenting-o "></i>&nbsp; 回复</a>\n' +
+                                '                        </div>\n' +
+                                '                    </div>' +
+                                '                    <div class="clearfix"></div>\n' +
+                                '                </li>'
+                        }
+                        else {
+                            li_content = '<li style="margin-bottom: 40px">\n' +
+                                '                    <div class="head" style="float:left; height: 100px; width: 70px">\n' +
+                                '                        <img src="' + info.head + '"\n' +
+                                '                             style="width: 60px; height: 60px;border-radius: 30px">\n' +
+                                '                    </div>\n' +
+                                '                    <div class="cont" style="float:left;width:840px">\n' +
+                                '                        <div class="userinfo"\n' +
+                                '                             style="font-size: 16px; font-family: \'PingFangSC-Medium\',\'Microsoft YaHei\',sans-serif; color: #262728; margin-bottom: 14px">\n' +
+                                '                            ' + info.user + '\n' +
+                                '                        </div>\n' +
+                                '                        <div class="usercommnet"\n' +
+                                '                             style="font-size: 16px; font-family: \'PingFangSC-Regular\',\'Microsoft YaHei\',sans-serif; color: #262728; margin-bottom: 14px; word-break: break-all">\n' +
+                                '                            ' + info.content + '\n' +
+                                '                        </div>\n' +
+                                '                        <div class="useraction" style="margin-bottom: 14px">\n' +
+                                '                            <span style="font-size: 12px;font-family: \'PingFangSC-Regular\',\'Microsoft YaHei\',sans-serif; color:#a0a3ae; margin: 0">' + info.add_time + '</span>\n' +
+                                '                            <a style="float:right;display: none"><i class="fa fa-commenting-o "></i>&nbsp; 回复</a>\n' +
+                                '                        </div>\n' +
+                                '                        <div style="width: 840px; border-top: solid #dad6d7 1px;font-size: 16px; font-family: \'PingFangSC-Regular\',\'Microsoft YaHei\',sans-serif; color: #262728;">\n' +
+                                '                            <div style="margin-top: 14px">\n' +
+                                '                                <div style="margin-bottom: 14px; border-left: solid #ff8a00 3px; "><span\n' +
+                                '                                        style="margin-left: 10px;color:#ff8a00">管理员回复：</span></div>\n' +
+                                '                                <div style=" word-break: break-all;color:#ff8a00">' + info.reply + '\n' +
+                                '                                </div>\n' +
+                                '                            </div>\n' +
+                                '                        </div>\n' +
+                                '                    </div>\n' +
+                                '                    <div class="clearfix"></div>\n' +
+                                '                </li>'
+                        }
+                        $('#' + odlist.list_id).append(li_content);
+                    }
+
+                    $('.usercommnet').each(function () {
+                        var tempstr = $(this).html();
+                        tempstr = tempstr.replace(/(^\s*)|(\s*$)/g, "").replace(/[\n\r]/g, '<br>');
+                        $(this).html(tempstr);
+                    })
+                }
+                else {
+                    if (myodic[l_id].type == 0) {
+                        $('#mycommentarea').hide();
+                    }
+                    else {
+                        $('#commoncommentarea').children('nav').hide();
+                    }
+                    myodic[l_id].has_comments = 0;
+                    $('#' + l_id + '_page_next').addClass('disabled');
+                    $('#' + odlist.list_id).append("暂无精选评论！");
+
+                }
+
+            },
+            error: function (xhr, textStatus) {
+                console.log(xhr);
+                console.log(textStatus);
+            }
+        })
+    }
+
+    function setComment(key, value) {
+        if (this.hasOwnProperty(key)) {
+            this[key] = value;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function setFromView() {
+
+
+
+        setComment.call(this, "comment_type", "大作文");
+
+
+
+        setComment.call(this, "comment_identity", "title:小孩喜欢看电视的原因和解决方法,id:117");
+
+    }
+
+    function CommentList() {
+        var params = {
+            current_page: 1,
+            pagesize: 5,
+            comment_type: "主页",
+            comment_identity: "主页",
+        };
+        setFromView.call(params);
+        //setFromJS.call(params);
+        mylist_setting('comment_list', params, 1);
+        mylist_setting('my_comment_area', params, 0);
+    }
+
+    function uploadmaincontact() {
+        var myformData = new FormData($("#maincontact")[0]);
+        if ($('#maincontactmsg').val() == '')
+            return;
+        $.ajax({
+            url: $("#maincontact").attr('action'),
+            type: 'POST',
+            data: myformData,
+            async: false,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+                alert("提交成功！");
+
+
+
+
+
+                window.location.reload();
+
+            },
+            error: function (xhr, textStatus) {
+                console.log(xhr);
+                console.log(textStatus);
+
+            }
+        });
+    }
+
+</script>
+
+
+
+<script>
+
+    function enable_update(btn, type) {
+
+    }
+
+    function updateGuandian(btn) {
+
+
+    }
+
+    function updateAnswer(btn) {
+
+
+    }
+
+
+    function registerPigai() {
+        $(".pigai").click(function () {
+            $(".pigai").toggleClass("checked");
+        });
+    }
+
+</script>
+
+<script>
+    disableMouse($('.content-wrapper'));
+    $('.content-wrapper').each(function () {
+            this.onmousedown = function () {
+                if (event.button == 2) {
+                    event.returnValue = false;
+                }
+            };
+
+            this.onkeydown = function () {
+                if ((event.ctrlKey) && (window.event.keycode == 67)) {
+                    event.returnValue = false;
+                }
+            };
+
+            this.oncopy = function () {
+                return false;
+            }
+        }
+    );
+
+
+    var uueditors = [];
+
+    var WritingManager = function () {
+
+    };
+    WritingManager.prototype.initDefaultShow = function () {
+        $('.firstTitle').each(function () {
+            var parent = $(this).parent();
+            var defaultshow = $(this).attr('defaultshow');
+            if (defaultshow == 'True') {
+                // $(this).children('img').addClass('xialaup');
+                $(parent).children('firstTitleContent').show();
+            } else {
+                $(this).children('img').addClass('xialaup');
+            }
+        });
+    };
+    WritingManager.prototype.initHistoryXuanXiang = function () {
+        if (this.historyUEDITORS.length > 0) {
+            $.each(this.historyUEDITORS, function (n, value) {
+                // console.log(n,value['field']);
+                var parent = $('.ueditorParent[data-type="选项"][data-id="' + value['field'] + '"]');
+                $(parent).find('textarea').val(value['my_answer']).attr("disabled", "disabled");
+                $(parent).find('.submitExtraFileds').hide();
+                $(parent).find('.ueditor-content').show();
+                $(parent).find('.changeExtraFileds').show();
+
+            });
+        }
+        $('textarea').each(function () {
+            //如果已经做过了,隐藏倒计时
+            if ($(this).val() != "") {
+                $(this).prev().hide();
+            }
+        });
+    };
+    WritingManager.prototype.initState = function () {
+        this.initDefaultShow();
+        this.initHistoryXuanXiang();
+    };
+    WritingManager.prototype.resizeSection = function () {
+        $('.ResizeSection').each(function () {
+            $(this).niceScroll().resize();
+        });
+    };
+    WritingManager.prototype.registerFirstTitleClick = function () {
+        var that = this;
+        //第一级title点击事件
+        $('.firstTitle').click(function () {
+            //check Auth1
+            //只有小作文需要控制第一级
+
+            var id = $(this).parent().attr('data-id');
+            var title = $(this).attr('title');
+            var btn = $(this).parent().children('.firstTitleContent');
+            var hasin = $(btn).hasClass("in");
+            if (hasin) {
+                $(btn).removeClass('in'); //隐藏
+                $(btn).prev().children('img').addClass('xialaup')
+            } else {
+                $(btn).addClass('in');
+                $(btn).prev().children('img').removeClass('xialaup')
+                //如果没有提交记录，需要开始倒计时
+                var content = $(this).parent().find('textarea').val();
+                var started = $(this).parent().find('.timer').attr('started');
+                if (content == "" && started != 'yes') {
+                    var downtimer = CountDownTimer({
+                        'min': $(this).parent().attr('min'),
+                        'alert': title,
+                        "label": $(this).parent().find('.timer')
+                    });
+                    that.timerset[id] = downtimer;
+                    var started = $(this).parent().find('.timer').attr('started', 'yes');
+                }
+            }
+            that.resizeSection();
+
+        });
+    };
+    WritingManager.prototype.updateXuanxiang = function (btn) {
+        var that = this;
+        var content = $(btn).parent().parent().children('textarea').val();
+        // console.log('ajax 选项' + content);
+        if (content == "") {
+            alert("请先作答!");
+            return false;
+        }
+        var id = $(btn).attr('data-id');
+        var fd = new FormData();
+        fd.append('id', id);
+        fd.append('content', content);
+        $.ajax({
+            cache: false,
+            type: 'post',
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            url: "/api/v1/updateUserWritingUEDITOR/",
+            data: fd,
+            beforeSend: function (xhr, settings) {
+                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+            },
+            success: function (data) {
+                if (data.status == 'fail') {
+                    if (data.reason == 'login') {
+                        alertAuth(this, 3);
+                    }
+                }
+                $(btn).parent().parent().parent().children('.ueditor-content').show();
+                $(btn).hide();
+                $(btn).next().show();
+                $(btn).parent().parent().children('textarea').attr("disabled", "disabled");
+                that.resizeSection();
+                //作答后隐藏倒计时
+                $(btn).parent().parent().children('.timer-box').hide();
+                that.timerset[id].stopTimer();
+            }
+        });
+    };
+    WritingManager.prototype.registersubmitExtraFileds = function () {
+        var that = this;
+        //提交富文本选项点击事件
+        $('.submitExtraFileds').click(function () {
+
+
+            // $(this).removeClass('submitExtraFileds').addClass('changeExtraFileds');
+            var type = $(this).attr('data-type');
+            if (type == "ABC") {
+                // updateABC(this);
+            } else if (type == "选项") {
+                that.updateXuanxiang(this);
+            }
+            // registerchangeExtraFileds();
+
+        });
+    };
+    WritingManager.prototype.registerchangeExtraFileds = function () {
+        $('.changeExtraFileds').click(function () {
+            $(this).parent().parent().children('textarea').removeAttr('disabled');
+            $(this).hide();
+            $(this).prev().show();
+
+        });
+    };
+    WritingManager.prototype.startWritingGuandianClick = function () {
+        $('.startWritingGuandian').click(function () {
+            if ($(this).attr('started') != 'yes') {
+                this.GuandianTimer = new CountDownTimer({
+                    'min': $(this).attr('min'),
+                    'alert': '观点',
+                    "label": $('.guandian_label')
+                });
+
+                var started = $(this).attr('started', 'yes');
+                $(this).hide();
+                $(this).next().show();
+            }
+
+        });
+    };
+    WritingManager.prototype.startWritingZhengwenClick = function () {
+        $('.startWritingZhengwen').click(function () {
+            if ($(this).attr('started') != 'yes') {
+                this.ZhengwenTimer = new CountDownTimer({
+                    'min': $(this).attr('min'),
+                    'alert': '正文',
+                    "label": $('.zhengwen_label')
+                });
+                var started = $(this).attr('started', 'yes');
+                $(this).hide();
+                $(this).next().show();
+            }
+
+        });
+    };
+    WritingManager.prototype.submitUpdateClick = function () {
+        var that = this;
+        $('#submit_guandian').click(function () {
+            var guandian = $("#my_cn_text").val();
+            if (guandian == "") {
+                alert("请先作答!");
+                return false;
+            }
+            var fd = new FormData();
+            fd.append('testid', '117');
+            fd.append('type', 'great');
+            fd.append('cnAnswer', guandian);
+
+            $.ajax({
+                cache: false,
+                type: 'post',
+                contentType: false,
+                processData: false,
+                dataType: 'json',
+                url: "/api/v1/updateUserWriting/",
+                data: fd,
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", "gBk6MXdLPEncczo9xkVX8nuqghW4Km6fmZJjldSoMiA158GTPz7FUkmfTshJlobg");
+                },
+                success: function (data) {
+                    if (that.GuandianTimer) {
+                        that.GuandianTimer.stopTimer();
+                    }
+                    if (data.status == 'fail') {
+                        if (data.reason == 'login') {
+                            alertAuth(this, 3);
+                        }
+                    }
+                    $("#my_cn_text").attr("disabled", "disabled");
+                    $("#submit_guandian").hide();
+                    $("#submit_guandian").prev().hide();
+                    $("#update_guandian").show();
+                    $("#guandian_after").slideDown(1000);
+                    $("#en-section").slideDown();
+                }
+            });
+        });
+        $('.update_input').click(function () {
+            var type = $(this).data('type');
+            var btn = this;
+            $(btn).hide();
+            $(btn).prev().show();
+            $(btn).prev().prev().show();
+
+            if (type == "guandian") {
+                $(btn).parent().parent().children("textarea").removeAttr("disabled");
+                $("#guandian_after").slideUp();
+                $("#en-section").slideUp();
+            } else if (type = "answer") {
+                $(btn).parent().parent().parent().children("textarea").removeAttr("disabled");
+                $("#answer_after").slideUp();
+                $("#refer_fanwen").slideUp();
+                $("#need_reply_box").show();
+            }
+        });
+        $('#submit_answer').click(function () {
+            var that = this;
+            var answer = $("#my_en_text").val();
+            if (answer == "") {
+                alert("请先作答!");
+                return false;
+            }
+            var fd = new FormData();
+            var need_pg = $(".pigai").hasClass("checked");
+            if (need_pg) {
+                fd.append('needReply', 'Y');
+            }
+            fd.append('testid', '117');
+            fd.append('type', 'great');
+            fd.append('enAnswer', answer);
+
+            $.ajax({
+                cache: false,
+                type: 'post',
+                contentType: false,
+                processData: false,
+                dataType: 'json',
+                url: "/api/v1/updateUserWriting/",
+                data: fd,
+                beforeSend: function (xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", "gBk6MXdLPEncczo9xkVX8nuqghW4Km6fmZJjldSoMiA158GTPz7FUkmfTshJlobg");
+                },
+                success: function (data) {
+                    if (that.ZhengwenTimer) {
+                        that.ZhengwenTimer.stopTimer();
+                    }
+                    if (data.status == 'fail') {
+                        if (data.reason == 'login') {
+                            alertAuth(this, 3);
+                        }
+                    } else {
+                        window.location.reload();
+                    }
+
+                }
+            });
+        });
+
+    };
+    WritingManager.prototype.bindEvent = function () {
+        this.registerFirstTitleClick();
+        this.registersubmitExtraFileds();
+        this.registerchangeExtraFileds();
+        this.startWritingGuandianClick();
+        this.startWritingZhengwenClick();
+        this.submitUpdateClick();
+    };
+    WritingManager.prototype.init = function (params) {
+        this.timerset = {};
+        this.GuandianTimer = null;
+        this.historyABC = [];
+        this.testvalue = 10;
+        this.historyUEDITORS = [];
+        if (params.uueditors) {
+            this.historyUEDITORS = params.uueditors;
+        }
+
+
+        this.initState();
+        this.bindEvent();
+        return this;
+    };
+    new WritingManager().init({'uueditors': uueditors});
+    $().ready(function () {
+        registerPigai();
+        wordStatic("#my_en_text", 'great');
+        $(".syno_section").niceScroll({
+            cursorcolor: "#fee1b2",
+            cursoropacitymax: 1,
+            touchbehavior: false,
+            cursorwidth: "8px",
+            railalign: "right",
+            cursorborder: "0",
+            autohidemode: false,
+            cursorborderradius: "8px"
+
+        });
+        $("#answer-box-section").niceScroll({
+            cursorcolor: "#fee1b2",
+            cursoropacitymax: 1,
+            touchbehavior: false,
+            cursorwidth: "8px",
+            railalign: "right",
+            cursorborder: "0",
+            autohidemode: false,
+            cursorborderradius: "8px"
+
+        });
+
+    });
+
+</script>
+
+
+
+
+</body>
+</html>
+
