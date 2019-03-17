@@ -36,9 +36,9 @@ module.exports = {
       repo : 'https://github.com/xychenxy/BootstrapTutorial.git',
       path : '/var/www/production',
       'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-        // env  : {
-        //     NODE_ENV: 'dev'
-        // }
+        env  : {
+            NODE_ENV: 'dev'
+        }
     }
   }
 };
