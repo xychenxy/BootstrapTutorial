@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a7b4348-7edb-44b7-aa7b-1a1f78040fff" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecosystem.config.js" afterPath="$PROJECT_DIR$/ecosystem.config.js" />
-    </list>
+    <list default="true" id="0a7b4348-7edb-44b7-aa7b-1a1f78040fff" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -67,8 +65,8 @@
       <file leaf-file-name="ecosystem.config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ecosystem.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="40" selection-end-column="9" />
+            <state relative-caret-position="645">
+              <caret line="43" column="2" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -626,12 +624,12 @@
       <workItem from="1550452415761" duration="498000" />
       <workItem from="1550468506861" duration="920000" />
       <workItem from="1551234560710" duration="267000" />
-      <workItem from="1552817057177" duration="1000000" />
+      <workItem from="1552817057177" duration="1223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91882000" />
+    <option name="totallyTimeSpent" value="92105000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2128" y="-132" width="886" height="932" extended-state="0" />
@@ -1376,8 +1374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ecosystem.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="11" lean-forward="false" selection-start-line="38" selection-start-column="11" selection-end-line="40" selection-end-column="9" />
+        <state relative-caret-position="645">
+          <caret line="43" column="2" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
           <folding />
         </state>
       </provider>
